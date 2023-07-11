@@ -1,0 +1,53 @@
+
+.logo {
+  width: auto;
+  height: 60vh; /* Ajusta el valor según tus necesidades */
+  overflow: hidden;
+  margin-top: 20vh;
+}
+
+ .carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  } 
+  
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    align-items: center;
+   
+  }
+  .carousel img.active {
+    opacity: 1;
+    display: block;
+  }
+
+  .carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .carousel {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  @media screen and (max-width: 980px) {
+    .carousel img.active ::before {
+      content: url(/img/Avaris-02.jpg); /* Imagen para pantallas con ancho máximo de 980px */
+    }
+  }
+
+
+
+
+  
